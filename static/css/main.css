@@ -1,0 +1,14 @@
+/* Mobile Size: 375px | Desktop Size: 1440px */
+
+:root {
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+  --color-light-grey: hsl(204, 43%, 93%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
