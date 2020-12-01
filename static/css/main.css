@@ -1,6 +1,7 @@
 /* Mobile Size: 375px | Desktop Size: 1440px */
 
 :root {
+  --border-radius: 0.3rem;
   --color-bright-yellow: hsl(71, 73%, 54%);
   --color-cyan: hsl(179, 62%, 43%);
   --color-grayish-blue: hsl(218, 22%, 67%);
@@ -8,7 +9,132 @@
 }
 
 body {
+  background-color: var(--color-light-grey);
+  display: grid;
+  place-items: center;
   font-family: "Karla", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
+  margin: 0 2rem;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 0.5rem;
+}
+
+.price-grid {
+  background-color: var(--color-cyan);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.price-grid > * {
+  padding: 1.5rem;
+}
+
+.price-grid__header {
+  background-color: #fff;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.price-grid__footer {
+  background-color: #4abebd;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.price-grid__heading {
+  color: #fff;
+}
+
+.price-grid__heading--invert {
+  color: var(--color-cyan);
+}
+
+.price-grid__subheading {
+  color: var(--color-bright-yellow);
+}
+
+.price-grid__excerpt {
+  color: var(--color-grayish-blue);
+  font-size: 0.875em;
+}
+
+.price-grid__cost {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
+  display: inline-flex;
+  line-height: 1;
+}
+
+.price-grid__price {
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.price-grid__price-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.price-grid__cta {
+  background-color: var(--color-bright-yellow);
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: block;
+  margin-top: 1.75rem;
+  padding: 0.75em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.price-grid__usps {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.8rem;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 90em) {
+  :root {
+    --border-radius: 0.5em;
+  }
+
+  .price-grid {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    max-width: 46em;
+  }
+
+  .price-grid > * {
+    padding: 2.5rem;
+  }
+
+  .price-grid__header {
+    font-size: 1.2rem;
+    grid-column: span 2;
+  }
+
+  .price-grid__heading--invert {
+    margin-bottom: 1em;
+  }
+
+  .pricing-grid__excerpt {
+    font-size: 1em;
+  }
 }
